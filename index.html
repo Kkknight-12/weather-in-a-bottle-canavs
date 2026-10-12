@@ -29,14 +29,15 @@
 .creator-heading{font:11px/1.55 Arial,Helvetica,sans-serif;letter-spacing:0;margin:0;color:var(--paper)}
 .creator-heading span{color:var(--muted)}
 .creator-links{display:flex;flex-wrap:wrap;gap:0 15px;pointer-events:auto}
-.creator-links a{display:inline-flex;align-items:center;min-height:32px;font-size:10px;letter-spacing:.04em;text-decoration:underline;text-decoration-color:#9daf9c55;text-underline-offset:5px}
-.creator-links a:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.creator-links a,.build-story{display:inline-flex;align-items:center;min-height:32px;font-size:10px;letter-spacing:.04em;text-decoration:underline;text-decoration-color:#9daf9c55;text-underline-offset:5px}
+.creator-links a:hover,.build-story:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.creator-actions{display:flex;align-items:center;gap:18px;pointer-events:auto}
 .creator-details{position:relative;width:max-content;max-width:100%;pointer-events:auto}
 .creator-details summary{cursor:pointer;min-height:32px;display:list-item;list-style-position:inside;color:var(--accent);font-size:10px;letter-spacing:.04em;padding:6px 0}
 .creator-details summary:focus-visible{outline:2px solid #dfedbc;outline-offset:5px}
 .credits-panel{position:absolute;top:calc(100% + 6px);left:0;width:min(390px,calc(100vw - 9vw));max-height:calc(100dvh - 290px);overflow:auto;overscroll-behavior:contain;padding:17px 19px;background:#081615f2;border:1px solid #d6e4ca38;border-radius:6px;box-shadow:0 12px 35px #0005;backdrop-filter:blur(12px);font-size:11px;line-height:1.7;scrollbar-width:thin}
 .credits-panel p{margin:0 0 13px}.credits-panel p:last-child{margin-bottom:0}.credits-panel strong{color:var(--paper);font-weight:600}.credits-panel a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}.credits-panel .reference-links{display:grid;gap:4px;margin:7px 0 12px}.reference-links a{padding:5px 0}
-@media(max-width:720px){.creator-card{top:88px;left:6vw;width:330px;max-width:88vw;padding:9px 12px;background:#081615db;border:1px solid #d6e4ca26;border-radius:5px}.creator-heading{font-size:10px}.creator-links{gap:0 9px}.creator-links a{min-height:44px;font-size:10px}.creator-details summary{min-height:36px;padding:8px 0}.credits-panel{width:min(390px,88vw);max-height:calc(100dvh - 405px);padding:15px 17px;font-size:12px}.reference-links a{min-height:44px;display:flex;align-items:center}}
+@media(max-width:720px){.creator-card{top:88px;left:6vw;width:330px;max-width:88vw;padding:9px 12px;background:#081615db;border:1px solid #d6e4ca26;border-radius:5px}.creator-heading{font-size:10px}.creator-links{gap:0 9px}.creator-links a,.build-story{min-height:44px;font-size:10px}.creator-details summary{min-height:36px;padding:8px 0}.credits-panel{width:min(390px,88vw);max-height:calc(100dvh - 405px);padding:15px 17px;font-size:12px}.reference-links a{min-height:44px;display:flex;align-items:center}}
 @media(max-height:600px) and (min-width:721px){.creator-card{top:91px}.creator-links a{min-height:27px}.creator-details summary{min-height:27px;padding:3px 0}.credits-panel{max-height:calc(100dvh - 240px)}}
 @media(max-width:360px){#title,#gather-title,#return-title{font-size:42px}.copy:before{inset:-60px -7vw}}
 </style></head><body>
@@ -52,6 +53,7 @@
     <a href="https://github.com/Kkknight-12" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
     <a href="https://github.com/Kkknight-12/weather-in-a-bottle-canavs" target="_blank" rel="noopener noreferrer">Source ↗</a>
   </nav>
+  <div class="creator-actions">
   <details class="creator-details">
     <summary>Credits &amp; references</summary>
     <div class="credits-panel" tabindex="0" aria-label="Credits and research references">
@@ -67,6 +69,8 @@
       <p>NOAA is an educational reference. This is an artistic water cycle, not a weather forecast or a physical fluid simulation.</p>
     </div>
   </details>
+    <a class="build-story" href="https://dev-projects-hq.vercel.app/work/weather-in-a-bottle" target="_blank" rel="noopener noreferrer">How it was built ↗</a>
+  </div>
 </aside>
 <main><section id="awaken" aria-labelledby="title"><div class="copy"><div class="eyebrow">An atmospheric experiment</div><h1 id="title">A whole storm.<br>At your <em>fingertips.</em></h1><p class="intro">One tiny landscape. An endless journey.<br>Step inside the water cycle and give the weather a gentle nudge.</p><a class="explore" href="#gather">Follow a drop <span aria-hidden="true">↓</span></a></div></section>
 <section id="gather" aria-labelledby="gather-title"><div class="copy"><div class="chapter-n">02 / GATHER</div><h2 id="gather-title">Every storm<br>starts <em>small.</em></h2><p class="intro">Move closer. Inside the cloud, tiny droplets gather. A quiet beginning for a long way down.</p><div class="facts"><div class="fact"><h3>01 · Condensation</h3><p>Water vapor cools and condenses into tiny liquid droplets, helping clouds form.</p></div><div class="fact"><h3>02 · Precipitation</h3><p>Water returns from the atmosphere as rain, snow and other forms of precipitation.</p></div></div></div></section>
